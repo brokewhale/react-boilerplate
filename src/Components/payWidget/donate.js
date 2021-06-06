@@ -8,7 +8,7 @@ function Donate() {
   //Making the btn background colour change
 
   const [activeBtn, setActiveBtn] = useState(0);
-  const [prices] = useState(["$0", "$5", "$50", "$500"]);
+  const [prices] = useState(["$5", "$50", "$500", "Others"]);
   let tel = [
     {
       svg: <Hmm />,
@@ -57,6 +57,11 @@ function Donate() {
                 </div>
               );
             })}
+          </div>
+          <div className={activeBtn === 3 ? "others show__others" : "others"}>
+            <div className="others__input">
+              <input type="number" />
+            </div>
           </div>
         </div>
         <div className="widget_bottom">
